@@ -18,7 +18,7 @@ Show output
     IF    ${status} == True
         Log    messdfvdvdasdcssge
     ELSE
-        Log    message
+        Log    jeck
     END
 
    
