@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20230828 19:12:12.241" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc01" source="c:\Performance\tc01.robot">
+<test id="s1-t1" name="Show output" line="14">
+<kw name="Log" library="BuiltIn">
+<arg>${example_regex}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.503" level="INFO">" harish is a good boy "</msg>
+<status status="PASS" starttime="20230828 19:12:12.503" endtime="20230828 19:12:12.506"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Should Contain</arg>
+<arg>${example_regex}</arg>
+<arg>abi</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${example_regex}</arg>
+<arg>abi</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20230828 19:12:12.508" level="FAIL">'" harish is a good boy "' does not contain 'abi'</msg>
+<status status="FAIL" starttime="20230828 19:12:12.507" endtime="20230828 19:12:12.508"/>
+</kw>
+<msg timestamp="20230828 19:12:12.508" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20230828 19:12:12.506" endtime="20230828 19:12:12.508"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.509" level="INFO">False</msg>
+<status status="PASS" starttime="20230828 19:12:12.509" endtime="20230828 19:12:12.509"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == True">
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>0</value>
+<value>5</value>
+<iter>
+<var name="${counter}"/>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230828 19:12:12.510" endtime="20230828 19:12:12.510"/>
+</kw>
+<status status="NOT RUN" starttime="20230828 19:12:12.510" endtime="20230828 19:12:12.510"/>
+</iter>
+<status status="NOT RUN" starttime="20230828 19:12:12.510" endtime="20230828 19:12:12.511"/>
+</for>
+<status status="NOT RUN" starttime="20230828 19:12:12.510" endtime="20230828 19:12:12.511"/>
+</branch>
+<branch type="ELSE">
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>5</value>
+<value>11</value>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.513" level="INFO">5</msg>
+<status status="PASS" starttime="20230828 19:12:12.513" endtime="20230828 19:12:12.513"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.511" endtime="20230828 19:12:12.513"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.515" level="INFO">6</msg>
+<status status="PASS" starttime="20230828 19:12:12.515" endtime="20230828 19:12:12.515"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.513" endtime="20230828 19:12:12.515"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.515" level="INFO">7</msg>
+<status status="PASS" starttime="20230828 19:12:12.515" endtime="20230828 19:12:12.515"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.515" endtime="20230828 19:12:12.515"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.516" level="INFO">8</msg>
+<status status="PASS" starttime="20230828 19:12:12.516" endtime="20230828 19:12:12.516"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.516" endtime="20230828 19:12:12.516"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.517" level="INFO">9</msg>
+<status status="PASS" starttime="20230828 19:12:12.516" endtime="20230828 19:12:12.517"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.516" endtime="20230828 19:12:12.517"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230828 19:12:12.517" level="INFO">10</msg>
+<status status="PASS" starttime="20230828 19:12:12.517" endtime="20230828 19:12:12.517"/>
+</kw>
+<status status="PASS" starttime="20230828 19:12:12.517" endtime="20230828 19:12:12.518"/>
+</iter>
+<status status="PASS" starttime="20230828 19:12:12.511" endtime="20230828 19:12:12.518"/>
+</for>
+<status status="PASS" starttime="20230828 19:12:12.511" endtime="20230828 19:12:12.518"/>
+</branch>
+<status status="PASS" starttime="20230828 19:12:12.510" endtime="20230828 19:12:12.518"/>
+</if>
+<status status="PASS" starttime="20230828 19:12:12.502" endtime="20230828 19:12:12.518"/>
+</test>
+<status status="PASS" starttime="20230828 19:12:12.249" endtime="20230828 19:12:12.521"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tc01">Tc01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

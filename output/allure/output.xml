@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20230826 20:32:13.214" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc02" source="C:\Performance\tc02.robot">
+<test id="s1-t1" name="Harish Testing" line="6">
+<kw name="Run Jmeter" library="JMeterLib">
+<arg>C:/JMeter/apache-jmeter-5.6.2/bin/jmeter.bat</arg>
+<arg>C:/Jmeter report/Robot_JMeter.jmx</arg>
+<arg>C:/Jmeter_JTL/re.jtl</arg>
+<doc>Runs JMeter. Returns None.
+Parameters:
+    - jmeterPath - path to JMeter executable file
+    - testPlanPath - path to jmx file
+    - logFilePath - path to a log file
+    - otherParams (optional) - other parameters to be called
+Examples:
+| run jmeter | D:/apache-jmeter-2.12/bin/jmeter.bat | D:/Tests/Test1Thread1Loop.jmx | D:/Tests/output1.jtl |
+| run jmeter | D:/apache-jmeter-2.12/bin/jmeter.bat | D:/Tests/Test1Thread1Loop.jmx | D:/Tests/output1.jtl | -H my.proxy.server -P 8000 |</doc>
+<msg timestamp="20230826 20:32:24.731" level="INFO">Starting JMeter with following parameters:
+ - JMeter path: C:/JMeter/apache-jmeter-5.6.2/bin/jmeter.bat
+ - Test plan path: C:/Jmeter report/Robot_JMeter.jmx
+ - Log file path: C:/Jmeter_JTL/re.jtl
+ - Other parameters:  .
+subprocess.call input list: ['C:/JMeter/apache-jmeter-5.6.2/bin/jmeter.bat', '-n', '-t', 'C:/Jmeter report/Robot_JMeter.jmx', '-l', 'C:/Jmeter_JTL/re.jtl']
+Value returned by JMeter: 0</msg>
+<status status="PASS" starttime="20230826 20:32:13.340" endtime="20230826 20:32:24.731"/>
+</kw>
+<status status="PASS" starttime="20230826 20:32:13.340" endtime="20230826 20:32:24.734"/>
+</test>
+<status status="PASS" starttime="20230826 20:32:13.293" endtime="20230826 20:32:24.735"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tc02">Tc02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
